@@ -1,0 +1,92 @@
+// 
+// components-demo.scss
+//
+
+// Demo Only
+.button-list {
+    margin-left: -8px;
+    margin-bottom: -12px;
+    
+    .btn {
+        margin-bottom: 12px;
+        margin-left: 8px;
+    }
+}
+
+/* Dropcap */
+.dropcap {
+    font-size: 3.1em;
+  }
+    
+.dropcap, .dropcap-circle, .dropcap-square {
+    display: block;
+    float: left;
+    line-height: 46px;
+    margin-right: 6px;
+    text-shadow: none;
+}
+
+
+// Icon demo ( Demo only )
+
+.icon-list-demo{
+    div {
+        cursor: pointer;
+        line-height: 45px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        p {
+            margin-bottom: 0;
+            line-height: inherit;
+          }
+      }
+      i {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 24px;
+        border: 1px solid lighten($gray-300, 4%);
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin-right: 12px;
+        border-radius: 3px;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+      .col-lg-4 {
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        background-clip: padding-box;
+        margin-bottom: 10px;
+        &:hover{
+            i {
+                color: $primary;
+              }
+        }
+      }
+}
+
+
+// Demos button
+.demos-show-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    writing-mode: vertical-rl;
+    font-weight: 600;
+    background-color: $danger;
+    color: $white !important;
+    line-height: 36px;
+    padding: 15px 3px;
+    border-radius: 6px 0 0 6px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .demos-show-btn {
+        display: none;
+    }
+}

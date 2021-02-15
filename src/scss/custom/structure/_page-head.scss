@@ -1,0 +1,58 @@
+// 
+// page-title.scss
+//
+
+.page-title-box {
+    position: relative;
+    padding: 0 30px;
+    margin: 0 -30px;
+    .page-title {
+        font-size: 16px;
+        border-bottom: 1px solid rgba($dark,0.2);
+        padding-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    // .page-title-right {
+    //     float: right;
+    //     margin-top: 7px;
+    // }
+
+    .nav-pills-custom {
+        .nav-item{
+          .nav-link{
+              padding: 5px 18px;
+              border-radius: 20px;
+              color: $danger;
+              line-height: 28px;
+            &:focus, &:hover{
+              background: $light;
+            }
+            &.active{
+                background-color: $white ;
+                color: $danger;
+              }
+          }
+        }
+      }
+
+      
+    .page-title-btn, .page-title-nav-pills  {
+        margin-top: 18px;
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .page-title-box {
+        .page-title {
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .page-title-btn {
+            display: none;
+        }
+    }
+}
