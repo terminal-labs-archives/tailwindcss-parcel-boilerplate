@@ -19,6 +19,71 @@ File: Main Css File
 }
 
 /* scrollbar Handle */
+
+/* click and drag on the right border of the element until I get to the size I want. 
+  I also want the mouse cursor to change to an arrow pointing up and down. */
+
+#handle {
+  float: right;
+  width: 100%;
+  z-index: 1;
+}
+
+#handle::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  cursor: ns-resize;
+  z-index: 2;
+}
+
+/* Treeview code */
+
+/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the plus/minus */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the plus/minus with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the plus/minus icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+/* end treeview code */
+
 ::-webkit-scrollbar-thumb {
   background: rgb(97, 96, 96);
   border-radius: 10px;
@@ -43,14 +108,16 @@ body {
   margin-top: 70px;
 }
 #text-input-pane {
-  margin:0;
-  height:250px;
+  --resizeable-height: 250px;
+  height: var(--resizeable-height);
+  margin:0; 
+  resize: vertical;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-transition: all 0.5s cubic-bezier(0.075,0.82, 0.165, 1);
   -webkit-transition: all 0.5s cubic-bezier(0.075,0.82, 0.165, 1);
   -moz-transition: all 0.5s cubic-bezier(0.075,0.82, 0.165, 1);
   -o-transition: all 0.5s cubic-bezier(0.075,0.82, 0.165, 1);
-  min-height: 68px;
+  min-height: 63px;
   max-height: 100vh;
 }
 #editor-data {
