@@ -1,40 +1,38 @@
-
 /**
-* Theme:  Simple - Responsive Bootstrap 4 Admin & Dashboard
-* Author: Coderthemes
-* File:   datatables
-*/
+ * Theme:  Simple - Responsive Bootstrap 4 Admin & Dashboard
+ * Author: Coderthemes
+ * File:   datatables
+ */
 
+// Default Datatable
+$(document).ready(function () {
+  // Default Datatable
+  $("#datatable").DataTable();
 
+  //Buttons examples
+  var table = $("#datatable-buttons").DataTable({
+    lengthChange: false,
+    buttons: ["copy", "excel", "pdf"],
+  });
 
-    // Default Datatable
-    $(document).ready(function() {
+  // Key Tables
 
-        // Default Datatable
-        $('#datatable').DataTable();
+  $("#key-table").DataTable({
+    keys: true,
+  });
 
-        //Buttons examples
-        var table = $('#datatable-buttons').DataTable({
-            lengthChange: false,
-            buttons: ['copy', 'excel', 'pdf']
-        });
+  // Responsive Datatable
+  $("#responsive-datatable").DataTable();
 
-        // Key Tables
+  // Multi Selection Datatable
+  $("#selection-datatable").DataTable({
+    select: {
+      style: "multi",
+    },
+  });
 
-        $('#key-table').DataTable({
-            keys: true
-        });
-
-        // Responsive Datatable
-        $('#responsive-datatable').DataTable();
-
-        // Multi Selection Datatable
-        $('#selection-datatable').DataTable({
-            select: {
-                style: 'multi'
-            }
-        });
-
-        table.buttons().container()
-                .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
-    } );
+  table
+    .buttons()
+    .container()
+    .appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)");
+});

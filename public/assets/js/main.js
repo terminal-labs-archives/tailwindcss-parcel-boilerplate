@@ -1,7 +1,5 @@
-import { 
-  addAdjustHeightListener
-  } from './helper'
+import { addAdjustHeightListener } from "./helper";
 
-$( document ).ready(function() { 
-  addAdjustHeightListener()
+$(document).ready(function () {
+  addAdjustHeightListener();
 });

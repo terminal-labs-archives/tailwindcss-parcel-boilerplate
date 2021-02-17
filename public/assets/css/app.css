@@ -41,49 +41,6 @@ File: Main Css File
   z-index: 2;
 }
 
-/* Treeview code */
-
-/* Remove default bullets */
-ul, #myUL {
-  list-style-type: none;
-}
-
-#myUL {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the plus/minus */
-.caret {
-  cursor: pointer;
-  user-select: none; /* Prevent text selection */
-}
-
-/* Create the plus/minus with a unicode, and style it */
-.caret::before {
-  content: "\25B6";
-  color: black;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-/* Rotate the plus/minus icon when clicked on (using JavaScript) */
-.caret-down::before {
-  transform: rotate(90deg);
-}
-
-/* Hide the nested list */
-.nested {
-  display: none;
-}
-
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active {
-  display: block;
-}
-
-/* end treeview code */
-
 ::-webkit-scrollbar-thumb {
   background: rgb(97, 96, 96);
   border-radius: 10px;
@@ -131,6 +88,18 @@ body {
 .full-height {
   height:100%;
 }
+.full-size {
+  height:100%;
+  width:100%;
+}
+/* YAML editor */
+.src,.dst {
+  width: 49%;
+  position: relative;
+  float: left;
+  height: 100%;
+}
+
 .nav-second-level li a,
 .nav-thrid-level li a {
   padding: 8px 20px;
@@ -2984,3 +2953,8 @@ h3.timeline-title {
     .ribbon-box .ribbon-two-pink span:after {
       border-right: 3px solid #ff3eab;
       border-top: 3px solid #ff3eab; }
+
+      /* bootstrap override */
+      .list-group-item:hover.active {
+        color:white;
+      }
