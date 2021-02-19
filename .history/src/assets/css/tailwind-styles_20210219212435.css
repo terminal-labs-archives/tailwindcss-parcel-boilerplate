@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tag-sm {
+    @apply px-2 mr-2 py-1 bg-informational uppercase text-sm text-white uppercase;
+  }
+
+  .markdown h1 {
+    @apply text-4xl font-bold leading-tight font-IBM-plex-sans;
+  }
+  
+  .markdown h2 {
+    @apply max-w-175 text-3xl font-semibold mt-6 font-IBM-plex-sans;
+  }
+
+  .markdown h3 {
+    @apply max-w-175 mt-6 font-semibold text-md font-IBM-plex-sans;
+  }
+
+  .markdown a {
+    @apply text-blue-300 font-IBM-plex-sans;
+  }
+  
+  .markdown a:hover {
+    @apply underline;
+  }
+
+  .markdown blockquote {
+    @apply max-w-175 text-base-vw mt-6 italic font-medium pl-8 border-l-2 border-matrix-blue font-IBM-plex-sans;
+  }
+
+}

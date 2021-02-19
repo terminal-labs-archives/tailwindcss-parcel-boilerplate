@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+select {
+  margin: 0;   
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../images/caret-down.png');
+  background-position: calc(100% - 10px) calc(0.75em + 2px);
+  background-repeat: no-repeat;
+}
+
+select.btn:focus {
+  background-image: url('../images/caret-up.png');
+  background-position: calc(100% - 10px) calc(0.70em + 2px);
+  background-repeat: no-repeat;
+}
+
+/* open mobile nav menu when glossary button pressed */
+#nav:checked + div {
+  display: block;
+}
+
+/* replace main nav with search input after search icon is pressed */
+#main_nav:checked + ul {
+  display: none;
+}
+
+/* show search input */
+#main_nav:checked + ul + div {
+  display: flex;
+} 
+
+#main_nav:not(:checked) + ul {
+  display: flex;
+}
+
+/* show search input */
+#main_nav:not(:checked) + ul + div {
+  display: none;
+} 
+
+/* show */
+input[type="radio"]:checked + div {
+  display: block;
+} 
+
+/* hide */
+input[type="radio"]:not(:checked) + div {
+  display: none;
+}
+
+/* show blog*/
+input[name="blog-page"]:checked + div {
+  display: flex;
+} 
+
+/* hide blog*/
+input[name="blog-page"]:not(:checked) + div {
+  display: none;
+}
+
+/* open video page when glossary button pressed */
+#video-dropdown:checked + div {
+  display: flex;
+}
+
+/* radio button to mimic "nothing selected" */
+#uncheckAll {
+  display: none;
+}
+
+#uncheckAll:checked ~ * label[for="uncheckAll"] {
+  display: none;
+}
+
+/* hides null radio button, to allow user to click glossary button when glossary page is not open.
+  Otherwise   */
+#glossary:not(:checked) ~ #dropdown-buttons > div > label[for="glossary"] > label[for="uncheckAll"] {
+  display: none;
+}
+#concepts:not(:checked) ~ #dropdown-buttons > div > label[for="concepts"] > label[for="uncheckAll"] {
+  display: none;
+}
+/* hides null radio button, to allow user to click glossary button when glossary page is not open. */
+#video-dropdown:not(:checked) ~ #dropdown-buttons > div > label[for="video-dropdown"] > label[for="uncheckAll"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+label:not([for]) {
+  position: relative;
+}
+
+label[for="uncheckAll"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+input[name="dropdown"]:not(:checked) + label[for="uncheckAll"] {
+  display: none;
+}
+
+/* open glossary page when glossary button pressed */
+#glossary:checked + div {
+  display: block;
+}
+/* glossary pagination */
+#glossary:checked + div > div > div:last-of-type {
+  display: block;
+}
+
+/* open concepts page when concepts button pressed */
+#concepts:checked + div {
+  display: block;
+}
+/* concepts pagination */
+#concepts:checked + div > div > div:last-of-type {
+  display: block;
+}
+
+/* active state for pagination buttons */
+#glossary-page1:checked ~ * label[for="glossary-page1"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#glossary-page2:checked ~ * label[for="glossary-page2"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#glossary-page3:checked ~ * label[for="glossary-page3"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#glossary-page4:checked ~ * label[for="glossary-page4"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+
+/* active state for pagination buttons */
+#concepts-page1:checked ~ * label[for="concepts-page1"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#concepts-page2:checked ~ * label[for="concepts-page2"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#concepts-page3:checked ~ * label[for="concepts-page3"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#concepts-page4:checked ~ * label[for="concepts-page4"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+
+/* active state for pagination buttons */
+#blog-page1:checked ~ * label[for="blog-page1"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#blog-page2:checked ~ * label[for="blog-page2"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#blog-page3:checked ~ * label[for="blog-page3"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+#blog-page4:checked ~ * label[for="blog-page4"] {
+  background-color:#3A68AF;
+  border-color:#3A68AF;
+  color: #333333;
+}
+
+#video-dropdown:checked ~ #dropdown-buttons {
+  padding-top: 1rem;
+  border-top-width: 3px;
+}
+#video-dropdown:checked ~ #dropdown-buttons > div, #glossary:checked ~ #dropdown-buttons > div {
+  border-top-width: 0px;
+}
+/* blue triangle indicates which dropdown is active */
+#glossary:checked ~ #dropdown-buttons {
+  padding-top: 1rem;
+  border-top-width: 3px;
+}
+#glossary:checked + div > div > img {
+  display: block;
+}
+#concepts:checked ~ #dropdown-buttons {
+  padding-top: 1rem;
+  border-top-width: 3px;
+}
+#concepts:checked + div > div > img {
+  display: block;
+}
+#video-dropdown:checked + div > div + img {
+  display: block;
+}
+
+#modal:checked + div {
+  display: block;
+}
+
+/* radio button design for modal popup where users vote on technological readiness of space tech*/
+.rating-container {
+  margin: 10px;
+}
+
+.rating-container input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.rating-container > input + label {
+  display: inline-block;
+  padding: 6px 6px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 1px solid #686868;
+  border-radius: 4px;
+}
+
+.rating-container input[type="radio"]:focus + label {
+  background-color: #686868;
+}
+
+.rating-container input[type="radio"]:checked + label {
+  background-color: #3A68AF;
+}
+
+@media only screen and (min-width: 1024px) {
+  #glossary:checked + div > div > div:last-of-type, #glossary:checked + div > div > img {
+    display: none;
+  }
+  #concepts:checked + div > div > div:last-of-type, #concepts:checked + div > div > img {
+    display: none;
+  }
+  /* disable pagination, fitting everything on wide screen*/
+  input[name="concepts-page"]:not(:checked) + div {
+    display: block;
+  }
+  input[name="glossary-page"]:not(:checked) + div {
+    display: block;
+  }
+  #glossary:checked + div {
+    display: flex;
+  }
+  #concepts:checked + div {
+    display: flex;
+  }
+  /* 
+    Changes the text of a button. the screen gets larger and so more text can fit inside the button
+    eg. experts -> meet the experts 
+  */
+  #concepts-btn span {
+    display: none;
+  }
+  #concepts-btn:after {
+    content: 'CORE CONCEPTS'
+  }
+  #video-btn span {
+    display: none;
+  }
+  #video-btn:after {
+    content: 'MEET THE EXPERTS'
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tag-sm {
+    @apply px-2 mr-2 py-1 bg-informational uppercase text-sm text-white uppercase;
+  }
+
+  .markdown h1 {
+    @apply text-4xl font-bold leading-tight font-IBM-plex-sans;
+  }
+  
+  .markdown h2 {
+    @apply max-w-175 text-3xl font-semibold mt-6;
+  }
+
+  .markdown h3 {
+    @apply max-w-175 mt-6 font-semibold text-md;
+  }
+
+  .markdown a {
+    @apply text-blue-300;
+  }
+  
+  .markdown a:hover {
+    @apply underline;
+  }
+
+  .markdown blockquote {
+    @apply max-w-175 text-base-vw mt-6 italic font-medium pl-8 border-l-2 border-matrix-blue;
+  }
+
+}
+
+@layer utilities {
+  @variants responsive {
+    .full-width {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (min-width: 1152px) {
+      .full-width {
+        margin-left: calc(-99vw / 2 + 1152px / 2);
+        margin-right: calc(-99vw / 2 + 1152px / 2);
+      }
+    }
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+    }
+  
+    .text-shadow-md {
+      text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+    }
+  
+    .text-shadow-lg {
+      text-shadow: 0 0 0 rgba(0,0,0,0.50), 0 0 0 #000, 0 0 0 rgba(0,0,0,0.50);
+    }
+  
+    .text-shadow-none {
+      text-shadow: none;
+    }
+    
+  }
+  .heading-1 {
+    font-size: 36px;
+    line-height: 47px;
+  }
+  .heading-2 {
+    font-size: 30px;
+    font-weight: light;
+    line-height: 39px;
+  }
+  .heading-3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .heading-4 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .heading-5 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .heading-6 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .btn-xs {
+    padding: 4px 19px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  .btn-sm {
+    padding: 10px 17px;
+    border-radius: 4px;
+  }
+  .btn-md {
+    height: 30px;
+    padding: 6px 19px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .btn-lg {
+    padding: 13px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .btn-xl {
+    padding: 21px 89px;
+    border-radius: 4px;
+  }
+}

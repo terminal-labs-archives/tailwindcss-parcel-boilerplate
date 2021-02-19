@@ -1,27 +1,15 @@
-# Vanilla JS Parcel Boilerplate
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/nug-oss/tailwindcss-parcel-boilerplate)
+# tailwindcss-parcel-boilerplate
 
-This is a starter workflow for building vanilla JavaScript applications using Parcel along with Babel and Sass.
+This is just a couple lines of code on a bunch of files showing how to use [Parcel](https://parceljs.org/) and [TailwindCSS](https://tailwindcss.com/) together.
 
-There is some sample code (Header and User components) and styling, but feel free to remove them
+Right now it's using `postcss-cli` to watch Tailwind's config file because I couldn't find any other way to make it work. If you know how this should be done, please open an issue to discuss it and/or submit a PR.
 
-This project was created in a YouTube tutorial [here](https://www.youtube.com/watch?v=8rD9amRSOQY&t=1165s)
+## Usage
 
-# Usage
+Just fork this repository, run `yarn` and you should be ready to go.
 
-Install dependencies
-
-```
-npm install
-```
-
-Run dev server - http://localhost:3000
-
-```
-npm run dev
-```
-
-Build assets for production
-
-```
-npm run build
-```
+- **Development:**
+  `yarn start` will run a development server with hot reloading at <localhost:1234>
+- **Production:**
+  `yarn build` will bundle everything up on your `/dist` folder
