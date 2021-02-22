@@ -41,14 +41,17 @@ $('#tree').bstreeview({ data: getTree() });
 // Get the container element
 var btnContainer = document.getElementById("tree");
 
-// Get all nodes with class="btn" inside the container
+// Get all nodes inside the container
 var btns = btnContainer.getElementsByClassName("list-group-item");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    if (this.className.includes("active")) {
+      this.classList.remove("active");
+    }
+    else {
+      this.className += " active";
+    }
   });
 }

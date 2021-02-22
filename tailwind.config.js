@@ -2,11 +2,10 @@ module.exports = {
   prefix: '',
   important: false,
   darkMode: 'class',
+  purge: false,
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
   },
-  // purge: ["./src/*.html"],
   theme: {
     fontFamily: {
       'IBM-plex-sans': ['IBM Plex Sans', 'sans-serif'],

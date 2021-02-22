@@ -1,5 +1,4 @@
-const yaml = require('js-yaml');
-const fs   = require('fs');
+const fs = require('fs');
 
 // Get yml file contents and place inside text editor for user to edit
 try {

@@ -4783,7 +4783,6 @@ input[type="button"].btn-block {
   .list-group-item + .list-group-item {
     border-top-width: 0; }
     .list-group-item + .list-group-item.active {
-      margin-top: -1px;
       border-top-width: 1px; }
 
 .list-group-horizontal {
