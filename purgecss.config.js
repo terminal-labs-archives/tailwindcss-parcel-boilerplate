@@ -1,6 +1,6 @@
 module.exports = {
   content: ['./src/**/*.html', './src/**/*.svg', './src/**/*.js'],
-  css: ['css/app.css'],
+  css: ['css/codemirror.css'],
   extractors: [
     {
       extensions: ['html', 'svg', 'js'],
