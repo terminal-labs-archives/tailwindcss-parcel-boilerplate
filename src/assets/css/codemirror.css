@@ -1,5 +1,25 @@
 /* purgecss start ignore */
 
+/* preview json data panel */
+.preview .CodeMirror {
+  background-color: #F8F8F8;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.src .CodeMirror {
+  background-color: #fffffb;
+  border: 1px solid #888;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc inset;
+  margin-right: 20px;
+}
+
+.subheader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* BASICS */
 
 .CodeMirror {

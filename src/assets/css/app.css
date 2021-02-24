@@ -24,6 +24,7 @@ File: Main Css File
   display:inline !important;
   height:26px !important;
 }
+
 /* draggable border */
 
 /* click and drag on the right border of the element until I get to the size I want. 
@@ -83,6 +84,9 @@ body {
   min-height: 63px;
   max-height: 100vh;
 }
+#markdown-editor {
+  height: 100%;
+}
 #editor-data {
   width:100%;
   height:100%;
@@ -99,7 +103,7 @@ body {
   width:100%;
 }
 /* YAML editor */
-.src,.dst {
+.src,.preview {
   width: 49%;
   position: relative;
   float: left;

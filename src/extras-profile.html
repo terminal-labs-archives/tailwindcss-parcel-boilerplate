@@ -210,53 +210,21 @@
                         <!-- Preview Article -->
                           <article class="markdown" id="target"></article>
                           <script id="template" type="x-tmpl-mustache">
-#{{title}}
+  #{{title}}
 
-by {{author}}
+  by {{author}}
 
-falcon-heavy-isp: {{fh_isp}}
+  falcon-heavy-isp: {{fh_isp}}
 
-falcon-heavy-Specidic impulse: {{fh_SFC}}                     
+  falcon-heavy-Specidic impulse: {{fh_SFC}}                     
 
-![image-1](assets/images/pexels-pixabay-256379@2x.png)
+  ![image-1](assets/images/pexels-pixabay-256379@2x.png)
 
-Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus 
-et magnis dis parturient montes lorem, nascetur ridiculus mus. 
-Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla onsequat massa quis enim. Donec pede justo fringilla vel aliquet 
-nec vulputate eget. Lorem ispum dolore siamet ipsum dolor.
+  Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus 
+  et magnis dis parturient montes lorem, nascetur ridiculus mus. 
 
->You will never be happy if you continue to search for what happiness 
-consists of. You will never live if you are looking for the meaning of life.
-
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
-dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum 
-exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi 
-consequatur reprehenderit qui in ea voluptate velit esse quam nihil.
-
-##IBM Plex Sans Regular 32
-
-Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
-nobis est eligendi optio cumquer nihil impedit quo minus id quod maxime placeat facere.
-
-![](assets/images/pexels-pixabay-87089@2x.png)
-
-Ken Cedeno/Polaris/Bloomberg via Getty Images
-
-###IBM Plex Sans Regular 18
-
-Rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-pretium. Integer cidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-
-Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
-imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-porttitor eu, consequat vitae, eleifend ac, enim.
-
-###IBM Plex Sans Medium 22
+  >You will never be happy if you continue to search for what happiness 
+  consists of. You will never live if you are looking for the meaning of life.
                             </script>
                       </div>
                     </div>
@@ -361,7 +329,7 @@ porttitor eu, consequat vitae, eleifend ac, enim.
 
               <!-- text tab markup editor -->
               <div class="tab-pane full-size" id="text">
-                <textarea class="p-3 full-size" id="markdown-editor">
+                <textarea class="p-3 form-control" id="markdown-editor">
 
                 </textarea>
               </div>
@@ -484,10 +452,6 @@ porttitor eu, consequat vitae, eleifend ac, enim.
     <!-- loads yaml file and places content inside editable text editor -->
     <script src="assets/js/loadYML.js"></script>
 
-    <!-- moustache.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
-    <script src="assets/js/loadMarkdown.js"></script>
-
     <!-- convert markdown to html -->
     <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 
@@ -498,5 +462,10 @@ porttitor eu, consequat vitae, eleifend ac, enim.
     <script src="https://cdn.jsdelivr.net/npm/quilljs-markdown@latest/dist/quilljs-markdown.js"></script>
 
     <!-- <script src="assets/js/quill.js"></script> -->
+
+    <!-- moustache.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+    <script src="assets/js/loadMarkdown.js"></script>
+
   </body>
 </html>

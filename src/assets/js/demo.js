@@ -17425,15 +17425,7 @@ var demo = (function () {
 
   /* eslint-env browser */
 
-
-
-
   var inspect$1    = require$$0.inspect;
-
-
-
-
-
 
   var source, result, permalink, default_text;
 
@@ -17487,11 +17479,16 @@ var demo = (function () {
 
     source.on('change', function () {
       clearTimeout(timer);
-      timer = setTimeout(parse, 500);
+      timer = setTimeout(parse, 300);
     });
 
     result = codemirror.fromTextArea(document.getElementById('result'), {
       readOnly: true
+    });
+
+    result.on('change', function () {
+      result.save();
+      console.log(document.getElementById('result').value)
     });
 
     // initial source
