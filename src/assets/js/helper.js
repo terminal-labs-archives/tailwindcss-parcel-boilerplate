@@ -45,3 +45,15 @@ export const getUpdatedYAMLData = () => {
 
   return doc;
 }
+
+export const renderPreviewArticle = () => {
+  var data = getUpdatedYAMLData()
+  console.log("yaml data: ")
+  console.log(data)
+  var template = document.getElementById('markdown-editor').value;
+  var rendered = Mustache.render(template, data);
+
+  var converter = new showdown.Converter(),
+    html      = converter.makeHtml(rendered);
+  $('#target').html(html);
+}

@@ -1,3 +1,5 @@
+import { renderPreviewArticle } from './helper'
+
 var demo = (function () {
   'use strict';
 
@@ -17488,7 +17490,8 @@ var demo = (function () {
 
     result.on('change', function () {
       result.save();
-      console.log(document.getElementById('result').value)
+      // updates preview article to reflect latest changes in yaml data
+      renderPreviewArticle()
     });
 
     // initial source
