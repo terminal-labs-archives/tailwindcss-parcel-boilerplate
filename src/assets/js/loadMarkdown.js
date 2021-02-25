@@ -9,14 +9,13 @@ $(document).ready(function () {
 
   var textEditor = document.getElementById('markdown-editor')
   var initialText= `#{{title}}
-by {{author}}
+by {{author}}, 13th June 2013
 
 falcon-heavy-isp: {{fh_isp}}
 
 falcon-heavy-Specidic impulse: {{fh_SFC}}                     
 
 ![main-image](images/pexels-pixabay-256379@2x.png)
-
 Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus 
 et magnis dis parturient montes lorem, nascetur ridiculus mus. 
 

@@ -296,6 +296,7 @@ input[name="dropdown"]:not(:checked) + label[for="uncheckAll"] {
   #video-btn:after {
     content: 'MEET THE EXPERTS'
   }
+  
 }
 
 @tailwind base;
@@ -308,7 +309,15 @@ input[name="dropdown"]:not(:checked) + label[for="uncheckAll"] {
   }
 
   .markdown {
-    @apply p-4;
+    @apply p-4 mx-auto;
+  }
+
+  .markdown p {
+    @apply max-w-175 text-base-vw leading-relaxed mt-4;
+  }
+
+  .markdown p > img + p {
+    @apply tag-sm uppercase;
   }
 
   .markdown h1 {
