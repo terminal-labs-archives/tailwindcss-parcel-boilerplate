@@ -1,5 +1,4 @@
-import { getYAMLData, getUpdatedYAMLData, renderPreviewArticle } from './helper'
-import util from 'util'
+import { getYAMLData, renderPreviewArticle } from './helper'
 
 $(document).ready(function () {
   // load front-matter for markdown from yml file
@@ -16,6 +15,8 @@ falcon-heavy-isp: {{fh_isp}}
 falcon-heavy-Specidic impulse: {{fh_SFC}}                     
 
 ![main-image](images/pexels-pixabay-256379@2x.png)
+*The Amazon Rainforest contains a multitude of species.*
+
 Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus 
 et magnis dis parturient montes lorem, nascetur ridiculus mus. 
 

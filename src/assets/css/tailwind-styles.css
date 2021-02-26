@@ -312,6 +312,10 @@ input[name="dropdown"]:not(:checked) + label[for="uncheckAll"] {
     @apply p-4 mx-auto;
   }
 
+  .markdown em {
+    @apply text-sm leading-tight font-bold not-italic text-gray-600;
+  }
+
   .markdown p {
     @apply max-w-175 text-base-vw leading-relaxed mt-4;
   }
@@ -330,6 +334,18 @@ input[name="dropdown"]:not(:checked) + label[for="uncheckAll"] {
 
   .markdown h3 {
     @apply max-w-175 mt-6 font-semibold text-md font-IBM-plex-sans;
+  }
+
+  .markdown h4 {
+    @apply max-w-175 mt-6 font-semibold text-base font-IBM-plex-sans;
+  }
+
+  .markdown h5 {
+    @apply max-w-175 mt-6 font-semibold text-sm font-IBM-plex-sans;
+  }
+
+  .markdown h6 {
+    @apply max-w-175 mt-6 font-semibold text-xs font-IBM-plex-sans;
   }
 
   .markdown a {

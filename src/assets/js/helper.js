@@ -1,4 +1,3 @@
-import util from 'util';
 const yaml = require('js-yaml');
 const fs = require('fs');
 
@@ -36,8 +35,6 @@ export const getUpdatedYAMLData = () => {
   var doc = {}
   try {
     doc = yaml.load( document.getElementById('result').value);
-    console.log("new yml data: ")
-    console.log(util.inspect(doc, false, 10, true));
   
   } catch (e) {
     console.log(e);
@@ -48,9 +45,8 @@ export const getUpdatedYAMLData = () => {
 
 export const renderPreviewArticle = () => {
   var data = getUpdatedYAMLData()
-  console.log("yaml data: ")
-  console.log(data)
   var template = document.getElementById('markdown-editor').value;
+  // take markdown with {{}} mustache variables and inserts value according to 'data' dictionary
   var rendered = Mustache.render(template, data);
 
   var converter = new showdown.Converter(),
